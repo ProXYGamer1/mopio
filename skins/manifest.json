@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "lekarstvo",
+  "version": "1.0",
+  "description": "Подмена JS-файла с сервера на локальный.",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["client.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
